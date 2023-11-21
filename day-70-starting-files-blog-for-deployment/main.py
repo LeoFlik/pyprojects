@@ -62,10 +62,12 @@ gravatar = Gravatar(
 
 
 # CONNECT TO DB
-# app.config["SQLALCHEMY_DATABASE_URI"] = engine.url
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URI")
 
-# app.config["SQLALCHEMY_DATABASE_URI"] = "cyclic-chocolate-sea-urchin-vest-sa-east-1"
-db = SQLAlchemy(app, engine_options={"url": os.environ["DB_URI"]})
+# app.config[
+#     "SQLALCHEMY_DATABASE_URI"
+# ] = "postgresql://default:8kra2ZindwpJ@ep-shy-cake-84016511.us-east-1.postgres.vercel-storage.com:5432/verceldb"
+# db = SQLAlchemy(app, engine_options={"url": os.environ["DB_URI"]})
 db = SQLAlchemy()
 db.init_app(app)
 
