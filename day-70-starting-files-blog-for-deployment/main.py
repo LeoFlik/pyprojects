@@ -59,6 +59,7 @@ gravatar = Gravatar(
 # engine = create_engine(
 #     "postgres://default:8kra2ZindwpJ@ep-shy-cake-84016511.us-east-1.postgres.vercel-storage.com:5432/verceldb"
 # )
+# postgresql://:password@localhost/database
 
 
 # CONNECT TO DB
